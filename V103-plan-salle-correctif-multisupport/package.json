@@ -1,8 +1,0 @@
-{
-  "name": "plan-salle-resabp-relay",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test:relay": "node tests/smoke-test.mjs"
-  }
-}
