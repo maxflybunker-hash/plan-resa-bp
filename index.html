@@ -3051,6 +3051,7 @@ function renderSettingsModal(activeTab){
     };
     zday.onchange=refreshZoneDay; zend.oninput=()=>{zstart.value=Number(+zend.value||0).toFixed(2)+" m → "+Number(ZONE_SIZE_M.rdc.h).toFixed(2)+" m";}; refreshZoneDay();
     $("#save-zone-day").onclick=async()=>{
+     const selectedServiceDate = new Date().toISOString().split('T')[0];
       const d=zday.value, h=+(ZONE_SIZE_M.rdc?.h||15.25), y=Math.max(2,Math.min(h-0.2,+zend.value||frontierY));
       frontierByDay[d]=y; if(selectedServiceDate && weekdayFromISO(selectedServiceDate)===d) frontierY=y;
       if(templates[d]) templates[d].frontierY=y;
