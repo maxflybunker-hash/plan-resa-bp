@@ -1,7 +1,7 @@
 -- À exécuter une seule fois dans Supabase > SQL Editor.
 -- Cette table contient les copies de lecture des réservations ResaBP pour le Plan.
 -- Aucun accès anon/auth direct n'est accordé : seule la fonction serveur utilise la clé service_role.
-create table if not exists public.resabp_reservations (
+create table if not exists reservations (
   external_id text primary key,
   date date,
   first_name text,
